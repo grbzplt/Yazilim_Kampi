@@ -6,6 +6,7 @@ namespace Yazilim_Kampi
     {
         static void Main(string[] args)
         {
+            //Düzenlendi
             Console.WriteLine("Hello World!");
         }
     }
