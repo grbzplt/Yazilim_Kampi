@@ -4,12 +4,10 @@ namespace Ders02_Odev6
 {
     class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
+            var urunler = new Bilgisayar[]
             {
-                var urunler = new Bilgisayar[]
-                {
                 new Bilgisayar()
                 {
                     BilgisayarAdi = "Casper Excalibur G900",
@@ -38,49 +36,48 @@ namespace Ders02_Odev6
                     BilgisayarFiyati = 11499,
                     StokdaVarmi = false
                 }
-                };
+            };
 
-                Console.WriteLine("");
-                Console.WriteLine("---------------- FOREACH ------------------");
+            Console.WriteLine("");
+            Console.WriteLine("---------------- FOREACH ------------------");
 
-                foreach (var urun in urunler)
-                {
-                    Console.WriteLine(urun);
-                }
-
-
-
-                Console.WriteLine("");
-                Console.WriteLine("---------------- FOR ------------------");
-
-                for (int urun = 0; urun < urunler.Length; urun++)
-                {
-                    Console.WriteLine(urunler[urun]);
-                }
-                Console.WriteLine("");
-                Console.WriteLine("---------------- WHİLE ------------------");
-
-                int index = 0;
-                while (index < urunler.Length)
-                {
-                    Console.WriteLine(urunler[index]);
-                    index++;
-                }
-
-                Console.ReadLine();
+            foreach (var urun in urunler)
+            {
+                Console.WriteLine(urun);
             }
 
-            public class Bilgisayar
-            {
-                public string BilgisayarAdi { get; set; }
-                public string BilgisayarTuru { get; set; }
-                public int BilgisayarFiyati { get; set; }
-                public bool StokdaVarmi { get; set; }
 
-                public override string ToString()
-                {
-                    return $"{BilgisayarAdi} - {BilgisayarTuru} - {BilgisayarFiyati} TL - {(StokdaVarmi ? "Stokda var" : "Stokda yok")}";
-                }
+
+            Console.WriteLine("");
+            Console.WriteLine("---------------- FOR ------------------");
+
+            for (int urun = 0; urun < urunler.Length; urun++)
+            {
+                Console.WriteLine(urunler[urun]);
+            }
+            Console.WriteLine("");
+            Console.WriteLine("---------------- WHİLE ------------------");
+
+            int index = 0;
+            while (index < urunler.Length)
+            {
+                Console.WriteLine(urunler[index]);
+                index++;
+            }
+
+            Console.ReadLine();
+        }
+
+        public class Bilgisayar
+        {
+            public string BilgisayarAdi { get; set; }
+            public string BilgisayarTuru { get; set; }
+            public int BilgisayarFiyati { get; set; }
+            public bool StokdaVarmi { get; set; }
+
+            public override string ToString()
+            {
+                return $"{BilgisayarAdi} - {BilgisayarTuru} - {BilgisayarFiyati} TL - {(StokdaVarmi ? "Stokda var" : "Stokda yok")}";
             }
         }
     }
