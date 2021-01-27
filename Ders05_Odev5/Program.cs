@@ -98,9 +98,7 @@ namespace Ders05_Odev5
             Console.WriteLine("---------------------- Tüm ürünleri alana indirim uygulama -----------------------");
 
             salesManager.ApplyDiscount(productList, campaign3);
-
-
-
+            
         }
     }
 }

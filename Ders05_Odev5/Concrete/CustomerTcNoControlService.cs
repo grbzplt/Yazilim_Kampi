@@ -1,4 +1,5 @@
-﻿using Ders05_Odev5.Entities;
+﻿using Ders05_Odev5.Abstract;
+using Ders05_Odev5.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;

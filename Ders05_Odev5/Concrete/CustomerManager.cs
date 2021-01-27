@@ -31,7 +31,7 @@ namespace Ders05_Odev5.Concrete
                 Console.WriteLine("Müşteri Kimlik: {0} - Müşteri Adı: {1} - Müşteri Soyadı: {2}\n", item.CustomerId, item.CustomerFirstName, item.CustomerLastName);
             }
             Console.WriteLine();
-        }
+        }       
 
     }
 }
