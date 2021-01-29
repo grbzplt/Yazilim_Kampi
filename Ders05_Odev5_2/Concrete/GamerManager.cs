@@ -9,16 +9,24 @@ namespace Ders05_Odev5_2.Concrete
     //MicroService
     public class GamerManager : IGamerService
     {
-        //Sınıf içinde sınıfı new leme onun yerine aş. gibi yap.
-        private IUserValidationService _userValidationService;
+        
+        IUserValidationService[] validators;
 
-        public GamerManager(IUserValidationService userValidationService)
+        public GamerManager(params IUserValidationService[] validators)
         {
-            _userValidationService = userValidationService;
-        }
+            this.validators = validators ?? throw new ArgumentNullException(nameof(validators));
+        }    
+
         public void Add(Gamer gamer)
         {
-            if (_userValidationService.Validate(gamer) == true)
+            var result = true;
+
+            foreach (var validator in validators)
+            {
+                result = result && validator.Validate(gamer);
+            }
+
+            if (result)
             {
                 Console.WriteLine("{0} {1} Kayıt oldu...",gamer.FirstName,gamer.LastName);
             }

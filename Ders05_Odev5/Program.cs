@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Ders05_Odev5.Entities;
 using Ders05_Odev5.Concrete;
+using Ders05_Odev5.Abstract;
 
 namespace Ders05_Odev5
 {
@@ -34,8 +35,8 @@ namespace Ders05_Odev5
             Campaign campaign2 = new Campaign { CampaignId = 11, CampaignName = "Oyun-2 2020", DiscountRate = 0.1 };
             Campaign campaign3 = new Campaign { CampaignId = 12, CampaignName = "Oyun-3 2019", DiscountRate = 0.25 };
 
-            
-            CustomerManager customerManager = new CustomerManager();
+
+            IManagerService<Customer> customerManager = new CustomerManager();
             ProductManager productManager = new ProductManager();
             CampaignManager campaignManager = new CampaignManager();
             SalesManager salesManager = new SalesManager();

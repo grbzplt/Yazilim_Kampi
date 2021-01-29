@@ -9,30 +9,27 @@ namespace Ders05_Odev5_2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("----------------FirstUserValidationManager---------------------");
-            GamerManager gamerManager1 = new GamerManager(new FirstUserValidationManager());
+            GamerManager gamerManager1 = new GamerManager(new EighteenYearsValidationManager());
             gamerManager1.Add(new Gamer
             {
                 Id = 1,
                 BirthYear = 1985,
                 FirstName = "ENGİN",
-                LastName = "DEMİROĞ",
+                LastName = "",
                 IdentityNumber = 12345
             });
 
-            Console.WriteLine("----------------SecondUserValidationManager--------------------");
-            GamerManager gamerManager2 = new GamerManager(new SecondUserValidationManager());
+            GamerManager gamerManager2 = new GamerManager(new EighteenYearsValidationManager(), new IsLastNameEmptyValidationManager());
             gamerManager2.Add(new Gamer
             {
                 Id = 1,
-                BirthYear = 1984,
+                BirthYear = 1985,
                 FirstName = "ENGİN",
-                LastName = "DEMİROĞ",
+                LastName = "",
                 IdentityNumber = 12345
             });
 
-
-
+            Console.ReadLine();
         }
     }
 }
