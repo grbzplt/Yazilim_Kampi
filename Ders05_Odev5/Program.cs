@@ -36,7 +36,7 @@ namespace Ders05_Odev5
             Campaign campaign3 = new Campaign { CampaignId = 12, CampaignName = "Oyun-3 2019", DiscountRate = 0.25 };
 
 
-            IManagerService<Customer> customerManager = new CustomerManager();
+            CustomerManager customerManager = new CustomerManager();
             ProductManager productManager = new ProductManager();
             CampaignManager campaignManager = new CampaignManager();
             SalesManager salesManager = new SalesManager();
