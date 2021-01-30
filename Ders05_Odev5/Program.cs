@@ -89,7 +89,6 @@ namespace Ders05_Odev5
 
             campaignManager.Update(campaign2);
 
-
             Console.WriteLine("");
             Console.WriteLine("---------------------- Tek ürüne indirim uygulama -----------------------");
 
@@ -98,8 +97,7 @@ namespace Ders05_Odev5
             Console.WriteLine("");
             Console.WriteLine("---------------------- Tüm ürünleri alana indirim uygulama -----------------------");
 
-            salesManager.ApplyDiscount(productList, campaign3);
-            
+            salesManager.ApplyDiscount(productList, campaign3);           
         }
     }
 }
