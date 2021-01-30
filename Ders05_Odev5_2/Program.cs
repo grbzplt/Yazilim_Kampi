@@ -9,6 +9,7 @@ namespace Ders05_Odev5_2
     {
         static void Main(string[] args)
         {
+
             GamerManager gamerManager1 = new GamerManager(new EighteenYearsValidationManager());
             gamerManager1.Add(new Gamer
             {
